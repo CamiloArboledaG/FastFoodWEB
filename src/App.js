@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Destacados from './components/Destacados/Destacados';
+import Endbar from './components/Endbar/Endbar';
+import Navbar from './components/Navbar';
+import Registro from './components/Registro/Registro';
+import Registro2 from './components/Registro/Registro2';
+import Ingresar from './components/Ingresar/Ingresar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*<Ingresar/>*/}
+      {/*<Ingresar2/>*/}
+      {/*<Registro/>*/}
+      <Navbar />
+      <Destacados />
+      <Endbar/>
     </div>
   );
 }
