@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import logo from './Recursos/logo.png';
+import logo from './../Recursos/logo.png';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
 import { fade } from '@material-ui/core/styles';
@@ -129,22 +129,6 @@ const Navbar = () => {
                             </div>
 
 
-                        </Grid>
-                        <Grid item xs={7} sm={3} md={3} lg={3}>
-                            <div className={classes.search}>
-                                <div className={classes.searchIcon}>
-                                    <SearchIcon />
-                                </div>
-                                <InputBase
-                                    placeholder="Buscar..."
-                                    classes={{
-                                        root: classes.inputRoot,
-                                        input: classes.inputInput,
-                                    }}
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </div>
-                            
                         </Grid>
                         <div className={classes.grow} />
                         <Grid item  sm={1.2} md={1.1} >
