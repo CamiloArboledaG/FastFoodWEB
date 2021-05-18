@@ -11,9 +11,11 @@ import Grid from '@material-ui/core/Grid';
 import EventIcon from '@material-ui/icons/Event';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import { Typography } from '@material-ui/core';
+import { Badge, Typography } from '@material-ui/core';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import Reserva from './Reservas/Reserva';
+import LogoRes from './../Recursos/LogoRestaurante/logoRes.png';
+import ReservaFinalizada from './Reservas/ReservaFinalizada';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -95,15 +97,15 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#252836",
             color: "white",
             borderRadius: "1rem",
-          }
+        }
     },
     MenuPerfil: {
         padding: "2rem",
         paddingRight: "13rem",
     },
     menudiv: {
-        backgroundColor:"black",
-        
+        backgroundColor: "black",
+
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
@@ -125,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
     },
     divPerfil: {
         backgroundColor: "#1F1D2B",
-        margin:"1rem",
+        margin: "1rem",
         padding: "1rem",
         display: "flex",
         alignItems: "center",
@@ -149,19 +151,33 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         borderRadius: "1rem",
     },
+    reservasdiv: {
+        display: "flex",
+        justifyContent: "center",
+        margin: "1rem",
+        flexDirection: "column",
+    },
 }));
 
 /**appbar fixed o static */
 const Navbar = () => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorE2, setAnchorE2] = React.useState(null);
 
+    
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
+    };
+    const handleClick2 = (event) => {
+        setAnchorE2(event.currentTarget);
     };
 
     const handleClose = () => {
         setAnchorEl(null);
+    };
+    const handleClose2 = () => {
+        setAnchorE2(null);
     };
 
     return (
@@ -198,10 +214,33 @@ const Navbar = () => {
                         <div className={classes.grow} />
                         <Grid item sm={1.2} md={1.1} >
                             <div className={classes.button}>
-                                <IconButton>
-                                    <EventIcon variant="contained" classes={{ root: classes.rootbutton }}></EventIcon>
-                                </IconButton>
 
+                                <IconButton onClick={handleClick2}>
+                                    <Badge badgeContent={3} color="secondary">
+                                        <EventIcon variant="contained" classes={{ root: classes.rootbutton }}></EventIcon>
+                                    </Badge>
+                                </IconButton>
+                                <div className="menudiv">
+                                    <Grid container>
+                                        <Menu
+                                            id="simple-menu"
+                                            anchorEl={anchorE2}
+                                            keepMounted
+                                            open={Boolean(anchorE2)}
+                                            onClose={handleClose2}
+                                            className={classes.Menu}
+                                        >
+                                            <Typography className={classes.MenuPerfil} variant="h5">Reservas</Typography>
+
+                                            <div className={classes.reservasdiv}>
+                                                <Reserva image={LogoRes} />
+                                                <ReservaFinalizada image={LogoRes}/>
+                                                <ReservaFinalizada image={LogoRes}/>
+                                            </div>
+                                        </Menu>
+                                    </Grid>
+
+                                </div>
                             </div>
                         </Grid>
                         <Grid item sm={1.2} >
@@ -211,46 +250,46 @@ const Navbar = () => {
                                 </IconButton>
                                 <div className="menudiv">
                                     <Grid container>
-                                    <Menu
-                                        id="simple-menu"
-                                        anchorEl={anchorEl}
-                                        keepMounted
-                                        open={Boolean(anchorEl)}
-                                        onClose={handleClose}
-                                        className={classes.Menu}
-                                    >
-                                        <Typography className={classes.MenuPerfil} variant="h5">Perfil</Typography>
-                                        <div className={classes.divPerfil}>
-                                            <div>
-                                                <AccountBoxIcon className={classes.imagenUsu}></AccountBoxIcon>
+                                        <Menu
+                                            id="simple-menu"
+                                            anchorEl={anchorEl}
+                                            keepMounted
+                                            open={Boolean(anchorEl)}
+                                            onClose={handleClose}
+                                            className={classes.Menu}
+                                        >
+                                            <Typography className={classes.MenuPerfil} variant="h5">Perfil</Typography>
+                                            <div className={classes.divPerfil}>
+                                                <div>
+                                                    <AccountBoxIcon className={classes.imagenUsu}></AccountBoxIcon>
+                                                </div>
+                                                <div className={classes.divinfo}>
+                                                    <Typography>Pepito Perez</Typography>
+                                                    <Typography >3121234488</Typography>
+                                                </div>
                                             </div>
-                                            <div className={classes.divinfo}>
-                                            <Typography>Pepito Perez</Typography>
-                                            <Typography >3121234488</Typography>
+
+                                            <div className={classes.profilemenuButondiv}>
+                                                <IconButton className={classes.profilemenuButonIcon}>
+                                                    <Typography className={classes.profilemenuButon}>Metodo de pago</Typography>
+                                                </IconButton>
                                             </div>
-                                        </div>
-                                        
-                                        <div className={classes.profilemenuButondiv}>
-                                        <IconButton className={classes.profilemenuButonIcon}>
-                                            <Typography className={classes.profilemenuButon}>Metodo de pago</Typography>
-                                        </IconButton>
-                                        </div>
 
-                                        <div className={classes.profilemenuButondiv}>
-                                        <IconButton className={classes.profilemenuButonIcon}>
-                                            <Typography className={classes.profilemenuButon}>Actualizar</Typography>
-                                        </IconButton>
-                                        </div>
+                                            <div className={classes.profilemenuButondiv}>
+                                                <IconButton className={classes.profilemenuButonIcon}>
+                                                    <Typography className={classes.profilemenuButon}>Actualizar</Typography>
+                                                </IconButton>
+                                            </div>
 
-                                        <div className={classes.profilemenuButondiv}>
-                                        <IconButton className={classes.profilemenuButonIcon}>
-                                            <Typography className={classes.profilemenuButon}>Ayuda</Typography>
-                                        </IconButton>
-                                        </div>
-                                        
-                                    </Menu>
+                                            <div className={classes.profilemenuButondiv}>
+                                                <IconButton className={classes.profilemenuButonIcon}>
+                                                    <Typography className={classes.profilemenuButon}>Ayuda</Typography>
+                                                </IconButton>
+                                            </div>
+
+                                        </Menu>
                                     </Grid>
-                                    
+
                                 </div>
 
 
