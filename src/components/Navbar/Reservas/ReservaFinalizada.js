@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Menu, Typography } from '@material-ui/core';
 import Backdrop from '@material-ui/core/Backdrop';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
@@ -42,6 +42,14 @@ const useStyles = makeStyles({
     backdrop: {
         color: '#fff',
     },
+    Menu: {
+        backgroundColor: "rgba(0, 0, 0, 0.4)",
+        "& .MuiPaper-root": {
+            backgroundColor: "#252836",
+            color: "white",
+            borderRadius: "1rem",
+        }
+    },
 });
 
 export default function ReservaFinalizada({ image }) {
@@ -54,10 +62,7 @@ export default function ReservaFinalizada({ image }) {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
-        setOpen(false);
-    };
-    const handleToggle = () => {
-        setOpen(!open);
+        setAnchorEl(null);
     };
 
 
@@ -103,7 +108,7 @@ export default function ReservaFinalizada({ image }) {
                     <Grid container>
                         <Grid item xs={12} sm={12}>
                             <div className={classes.button} >
-                                <Button variant="contained" onClick={handleToggle} classes={{
+                                <Button variant="contained" onClick={handleClick} classes={{
                                     root: classes.rootbutton2,
                                     label: classes.label,
                                 }}>
@@ -114,51 +119,58 @@ export default function ReservaFinalizada({ image }) {
                         </Grid>
                     </Grid>
                 </div>
-                                    
-                <Backdrop className={classes.backdrop} open={open} >
-                    <div className={classes.root} >
-                        <div className={classes.divinfo}>
-                            <Grid container className={classes.divinfo}>
-                                <Grid item xs={12} sm={5}>
-                                    <div>
-                                        <img src={image} alt="Ofertas" className="OfertasLogo" />
-                                    </div>
-                                </Grid>
-                                <Grid item xs={12} sm={7}>
-
-                                    <div>
-                                        <Typography variant="h6">Carnes de don juan</Typography>
-                                        <Typography variant="h7">¿Te gusto el restaurante?</Typography>
-                                        <Box component="fieldset" borderColor="transparent">
-                                            <Rating
-                                            />
-                                        </Box>
-                                    </div>
-                                </Grid>
-
-
-                            </Grid>
-
-                        </div>
-                        <div>
-
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                    className={classes.Menu}
+                >
+                        <div className={classes.root} >
                             <div className={classes.divinfo}>
-                                <Grid container>
-                                    <Grid item xs={12} sm={12}>
-                                        <div className={classes.button} >
-                                            <Button variant="contained" onClick={handleClose} classes={{
-                                                root: classes.rootbutton2,
-                                                label: classes.label,
-                                            }}>
-                                                <strong>Enviar</strong>
-                                            </Button>
+                                <Grid container className={classes.divinfo}>
+                                    <Grid item xs={12} sm={5}>
+                                        <div>
+                                            <img src={image} alt="Ofertas" className="OfertasLogo" />
                                         </div>
                                     </Grid>
+                                    <Grid item xs={12} sm={7}>
+
+                                        <div>
+                                            <Typography variant="h6">Carnes de don juan</Typography>
+                                            <Typography variant="h7">¿Te gusto el restaurante?</Typography>
+                                            <Box component="fieldset" borderColor="transparent">
+                                                <Rating
+                                                />
+                                            </Box>
+                                        </div>
+                                    </Grid>
+
+
                                 </Grid>
+
+                            </div>
+                            <div>
+
+                                <div className={classes.divinfo}>
+                                    <Grid container>
+                                        <Grid item xs={12} sm={12}>
+                                            <div className={classes.button} >
+                                                <Button variant="contained" onClick={handleClose} classes={{
+                                                    root: classes.rootbutton2,
+                                                    label: classes.label,
+                                                }}>
+                                                    <strong>Enviar</strong>
+                                                </Button>
+                                            </div>
+                                        </Grid>
+                                    </Grid>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </Backdrop>
+                </Menu>
+
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ import Registro from './components/Registro/Registro';
 import Registro2 from './components/Registro/Registro2';
 import Ingresar from './components/Ingresar/Ingresar';
 import Barusu from './components/Navbar/Barusu';
+import Recomendados from './components/Recomendados/Recomendados';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/*<Registro/>*/}
       {/*<Navbar />*/}
       <Barusu/>
-      <Destacados />
+      {/* <Destacados /> */}
+      <Recomendados/>
       <Endbar/>
     </div>
   );
