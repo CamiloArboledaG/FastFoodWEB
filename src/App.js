@@ -7,6 +7,7 @@ import Registro2 from './components/Registro/Registro2';
 import Ingresar from './components/Ingresar/Ingresar';
 import Barusu from './components/Navbar/Barusu';
 import Recomendados from './components/Recomendados/Recomendados';
+import RestaurantePerfil from './components/Restaurante/RestaurantePerfil';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/*<Navbar />*/}
       <Barusu/>
       {/* <Destacados /> */}
-      <Recomendados/>
+      {/* <Recomendados/>  */}
+      <RestaurantePerfil/>
       <Endbar/>
     </div>
   );

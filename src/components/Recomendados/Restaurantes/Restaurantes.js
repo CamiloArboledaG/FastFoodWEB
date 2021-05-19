@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard({ image, nombre, calificacion }) {
+export default function Restaurante({ image, nombre, calificacion }) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
