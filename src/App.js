@@ -8,6 +8,7 @@ import Ingresar from './components/Ingresar/Ingresar';
 import Barusu from './components/Navbar/Barusu';
 import Recomendados from './components/Recomendados/Recomendados';
 import RestaurantePerfil from './components/Restaurante/RestaurantePerfil';
+import ReservarRes from './components/Restaurante/Reserva/ReservarRes';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <Barusu/>
       {/* <Destacados /> */}
       {/* <Recomendados/>  */}
-      <RestaurantePerfil/>
+      {/* <RestaurantePerfil/> */}
+      <ReservarRes/>
       <Endbar/>
     </div>
   );
