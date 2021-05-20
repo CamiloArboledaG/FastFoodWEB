@@ -9,21 +9,49 @@ import Barusu from './components/Navbar/Barusu';
 import Recomendados from './components/Recomendados/Recomendados';
 import RestaurantePerfil from './components/Restaurante/RestaurantePerfil';
 import ReservarRes from './components/Restaurante/Reserva/ReservarRes';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      {/*<Ingresar/>*/}
-      {/*<Ingresar2/>*/}
-      {/*<Registro/>*/}
-      {/*<Navbar />*/}
-      <Barusu/>
-      {/* <Destacados /> */}
-      {/* <Recomendados/>  */}
-      {/* <RestaurantePerfil/> */}
-      <ReservarRes/>
-      <Endbar/>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/registro">
+            <Registro />
+            <Endbar />
+          </Route>
+          <Route path="/registro-2">
+            <Registro2 />
+            <Endbar />
+          </Route>
+          <Route path="/ingresar">
+            <Ingresar />
+            <Endbar />
+          </Route>
+          <Route path="/recomendados">
+            <Barusu />
+            <Recomendados />
+            <Endbar />
+          </Route>
+          <Route path="/restaurante">
+            <Barusu />
+            <RestaurantePerfil />
+            <Endbar />
+          </Route>
+          <Route path="/restaurante-reserva">
+            <Barusu />
+            <ReservarRes />
+            <Endbar />
+          </Route>
+          <Route path="/">
+            <Navbar />
+            <Destacados />
+            <Endbar />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+
   );
 }
 

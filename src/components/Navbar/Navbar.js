@@ -12,6 +12,7 @@ import { fade } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 
 
@@ -123,32 +124,39 @@ const Navbar = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={0.5} sm={0.5} >
                             <div className={classes.logodiv}>
-                                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                                    <img src={logo} className={classes.image} />
-                                </IconButton>
+                                <Link to="/">
+                                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                                        <img src={logo} className={classes.image} />
+                                    </IconButton>
+                                </Link>
+
                             </div>
 
 
                         </Grid>
                         <div className={classes.grow} />
-                        <Grid item  sm={1.2} md={1.1} >
+                        <Grid item sm={1.2} md={1.1} >
                             <div className={classes.button}>
-                                <Button variant="contained"  classes={{
+                            <Link to="ingresar">
+                            <Button variant="contained" classes={{
                                     root: classes.rootbutton,
                                     label: classes.label,
                                 }}>
                                     <strong>Ingresar</strong>
                                 </Button>
+                            </Link>
                             </div>
                         </Grid>
-                        <Grid item  sm={1.2} >
+                        <Grid item sm={1.2} >
                             <div className={classes.button} >
+                                <Link to="registro">
                                 <Button variant="contained" classes={{
                                     root: classes.rootbutton2,
                                     label: classes.label,
                                 }}>
                                     <strong>Registro</strong>
                                 </Button>
+                                </Link>
                             </div>
                         </Grid>
                     </Grid>

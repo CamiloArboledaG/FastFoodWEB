@@ -16,6 +16,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Reserva from './Reservas/Reserva';
 import LogoRes from './../Recursos/LogoRestaurante/logoRes.png';
 import ReservaFinalizada from './Reservas/ReservaFinalizada';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -188,9 +189,11 @@ const Navbar = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={0.5} sm={0.5} >
                             <div className={classes.logodiv}>
+                            <Link to="recomendados">
                                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                                     <img src={logo} className={classes.image} />
                                 </IconButton>
+                            </Link>
                             </div>
 
 
@@ -282,9 +285,11 @@ const Navbar = () => {
                                             </div>
 
                                             <div className={classes.profilemenuButondiv}>
+                                                <Link to="/">
                                                 <IconButton className={classes.profilemenuButonIcon}>
-                                                    <Typography className={classes.profilemenuButon}>Ayuda</Typography>
+                                                    <Typography className={classes.profilemenuButon}>Cerrar sesión</Typography>
                                                 </IconButton>
+                                                </Link>
                                             </div>
 
                                         </Menu>

@@ -5,6 +5,7 @@ import { Button, Grid, IconButton, Typography } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 import Lista from './Lista/lista';
 import comida from './../Recursos/platos/plato7.png'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -108,9 +109,11 @@ export default function RestaurantePerfil({  }) {
               <Typography className={classes.separacion}>Avenida 5 #99-99</Typography>
 
               <div className={classes.divreservabuton}>
+                <Link to="restaurante-reserva">
                 <IconButton className={classes.butonreserva}>
                   <Typography className={classes.textbutonreserva}>Reservar</Typography>
                 </IconButton>
+                </Link>
               </div>
             </div>
 

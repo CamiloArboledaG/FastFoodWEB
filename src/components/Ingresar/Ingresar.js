@@ -2,6 +2,7 @@ import React from 'react';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { Button, Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
 import "./Ingresar.css"
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     label: {
         textTransform: 'capitalize',
@@ -36,9 +37,11 @@ export default function Registro() {
     return (
         <div className="registro">
             <div className="divatras">
+                <Link to="/">
                 <IconButton >
                     <KeyboardBackspaceIcon fontSize="large" className="atras" />
                 </IconButton>
+                </Link>
             </div>
 
             <Grid container className="registroform">
@@ -51,18 +54,23 @@ export default function Registro() {
                         <div className="titulosform">
                             <Grid container spacing={5}>
                                 <Grid item xs={12} sm={6}>
+                                    <Link to="ingresar">
                                     <IconButton>
                                         <Typography component="h3" variant="h5" className="RegistroIngreso1">
                                             Ingresar
                          </Typography>
                                     </IconButton>
+                                    </Link>
+                                    
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
+                                    <Link to="registro">
                                     <IconButton>
                                         <Typography component="h3" variant="h5" className="RegistroIngreso2">
                                         Registro
                          </Typography>
                                     </IconButton>
+                                    </Link>
                                 </Grid>
                             </Grid>
 
@@ -79,12 +87,14 @@ export default function Registro() {
                                 </Grid>
                             </Grid>
                             <div className={classes.button} >
+                                <Link to="recomendados">
                                 <Button variant="contained" classes={{
                                     root: classes.rootbutton2,
                                     label: classes.label,
                                 }}>
                                     <strong>Ingresar</strong>
                                 </Button>
+                                </Link>
                             </div>
                         </form>
                     </div>

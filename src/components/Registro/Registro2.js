@@ -2,6 +2,7 @@ import React from 'react';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { Button,Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
 import "./Registro.css";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     label: {
@@ -36,9 +37,11 @@ export default function Registro() {
     return (
         <div className="registro">
             <div className="divatras">
+                <Link to="registro">
                 <IconButton >
                     <KeyboardBackspaceIcon fontSize="large" className="atras" />
                 </IconButton>
+                </Link>
             </div>
 
             <Grid container className="registroform">
@@ -83,12 +86,14 @@ export default function Registro() {
                                 </Grid>
                             </Grid>
                             <div className={classes.button} >
+                                <Link to="/ingresar">
                                 <Button variant="contained" classes={{
                                     root: classes.rootbutton2,
                                     label: classes.label,
                                 }}>
                                     <strong>Registrarse</strong>
                                 </Button>
+                                </Link>
                             </div>
                         </form>
                     </div>
