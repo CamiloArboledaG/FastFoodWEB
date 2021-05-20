@@ -9,6 +9,7 @@ import logo3 from './../Recursos/LogoRestaurante/logo3.png';
 import logo4 from './../Recursos/LogoRestaurante/logo4.png';
 import logo5 from './../Recursos/LogoRestaurante/logo5.png';
 import logo6 from './../Recursos/LogoRestaurante/logo6.png';
+import { Link } from 'react-router-dom';
 
 export default function Recomendados() {
 
@@ -29,7 +30,9 @@ export default function Recomendados() {
                         <Restaurantes image={logo1} nombre={"Pizza doña maria"} calificacion={"Excelente servicio "}/>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4} lg={3}>
+                        <Link to="restaurante">
                         <Restaurantes image={logo2} nombre={"Carnes de don juan"} calificacion={"Excelente servicio "}/>
+                        </Link>
                     </Grid>
                     <Grid item xs={12} sm={12} md={4} lg={3}>
                         <Restaurantes image={logo3} nombre={"Pastas la ricura"} calificacion={"Excelente servicio "}/>

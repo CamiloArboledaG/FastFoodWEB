@@ -6,6 +6,9 @@ import TextField from '@material-ui/core/TextField';
 import ListaReserva from './listaReserva';
 import Comida from './../../Recursos/platos/plato7.png';
 import Radio from '@material-ui/core/Radio';
+import { Link } from 'react-router-dom';
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -340,20 +343,24 @@ export default function ReservarRes({ }) {
         <div className>
           <Grid container>
             <Grid xs={12} sm={6}>
+              <Link to="restaurante">
             <Button variant="contained" classes={{
             root: classes.buttoncancelar,
             label: classes.label,
           }}>
             <strong>Cancelar reserva</strong>
           </Button>
+              </Link>
             </Grid>
             <Grid xs={12} sm={6}>
+              <Link to="recomendados">
             <Button variant="contained" classes={{
             root: classes.buttonreserva,
             label: classes.label,
           }}>
             <strong>Reservar</strong>
           </Button>
+              </Link>
             </Grid>
           </Grid>
           

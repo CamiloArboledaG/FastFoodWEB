@@ -4,6 +4,7 @@ import { Button, Checkbox, FormControlLabel, Grid, IconButton, makeStyles, TextF
 import "./Registro.css"
 import { deepOrange } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const OrangeCheckbox = withStyles({
     root: {
@@ -56,9 +57,11 @@ export default function Registro() {
     return (
         <div className="registro">
             <div className="divatras">
+                <Link to="/">
                 <IconButton >
                     <KeyboardBackspaceIcon fontSize="large" className="atras" />
                 </IconButton>
+                </Link>
             </div>
 
             <Grid container className="registroform">
@@ -71,18 +74,22 @@ export default function Registro() {
                         <div className="titulosform">
                             <Grid container spacing={5}>
                                 <Grid item xs={12} sm={6}>
+                                    <Link to="registro">
                                     <IconButton>
                                         <Typography component="h3" variant="h5" className="RegistroIngreso1">
                                             Registro
                          </Typography>
                                     </IconButton>
+                                    </Link>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
+                                    <Link to="ingresar" style={{ color: '#FFF' }}>
                                     <IconButton>
                                         <Typography component="h3" variant="h5" className="RegistroIngreso2">
                                             Ingresar
                          </Typography>
                                     </IconButton>
+                                    </Link>
                                 </Grid>
                             </Grid>
 
@@ -111,12 +118,15 @@ export default function Registro() {
                                 </Grid>
                             </Grid>
                             <div className={classes.button} >
-                                <Button variant="contained" classes={{
+                            <Link to="registro-2" style={{ color: '#FFF' }}>
+                            <Button variant="contained" classes={{
                                     root: classes.rootbutton2,
                                     label: classes.label,
                                 }}>
                                     <strong>Registrarse</strong>
                                 </Button>
+                            </Link>
+                                
                             </div>
                         </form>
                     </div>
