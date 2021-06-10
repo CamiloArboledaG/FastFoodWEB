@@ -1,0 +1,11 @@
+.endbar{
+    display: flex;
+    padding:2rem;
+    justify-content: space-between;
+}
+.color{
+    color:white;
+}
+.color:hover{
+    color:#EA7C69;
+}

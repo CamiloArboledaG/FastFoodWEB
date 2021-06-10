@@ -1,0 +1,18 @@
+.linke{
+    text-decoration: none;
+}
+.modal{
+    background-color: #282c34;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    
+}
+.pepe{
+    color: white;
+}

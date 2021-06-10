@@ -1,0 +1,39 @@
+.root{
+    background-color: #1F1D2B;
+    margin-top:10rem;
+    color: white;
+}
+.titulo{
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+.textosub{
+    color: #e0e6e9a9;
+    margin-bottom: 100rem;
+}
+.Imagen1{
+    height:9rem;
+}
+.Imagen2{
+    height:12rem;
+}
+.Imagen1:hover{
+    height:10rem;
+}
+.Imagen2:hover{
+    height:13rem;
+}
+.containerplatos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7em;
+    padding-bottom: 7em;
+}
+.recomendados{
+    background-color: #252836
+}
+.linke{
+    text-decoration: none;
+}

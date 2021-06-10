@@ -1,0 +1,91 @@
+.atras{
+    color: #EA7C69;
+}
+.divatras{
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem;
+    margin-left: 4rem;
+}
+.Registrotexto{
+    color:white;
+}
+.gridtexto{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: left;
+}
+.registroform{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.form{
+    background-color: #1F1D2B;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+}
+.formdiv{
+    background-color: #1F1D2B;
+    color: white;
+    margin: 8rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin:2rem;
+}
+.titulosform{
+    display: flex;
+    justify-content:space-between;
+    padding:2rem;
+    padding-bottom: 0rem;
+}
+.TextField{
+    background-color: #252836;
+    width: 70%;
+    padding: 0.4rem;
+    padding-left: 2rem;
+    font-size: medium;
+    color: rgba(245, 245, 245, 0.719);
+    height: 100%;
+    box-shadow: none;
+    border-radius: 3rem;
+    border-color: #ffffff09;
+}
+.checkboxform{
+    color: #EA7C69;
+}
+.Metodopago{
+    color: #EA7C69;
+}
+.RegistroIngreso1{
+    color: #EA7C69;
+}
+.RegistroIngreso2{
+    color: white;
+}
+.RegistroIngreso2:hover{
+    color: #EA7C69;
+    transition-duration: 10ms;
+}
+.TextField2{
+    background-color: #252836;
+    width: 70%;
+    padding: 0.4rem;
+    padding-left: 2rem;
+    font-size: medium;
+    color: rgba(245, 245, 245, 0.719);
+    height: 100%;
+    box-shadow: none;
+    border-radius: 3rem;
+    border-color: #ffffff09;
+}
+.divinfopago{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.linke{
+    text-decoration: none;
+}
