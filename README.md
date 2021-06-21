@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# FastFood🍔🍟🌭
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project of a website to make reservations in restaurants anywhere you have internet access, additional you can see the menu of the restaurants and have the food ready to consume it when you arrive.
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/50644185/122804395-7d56e300-d28d-11eb-8674-5cb286383a8c.png)
 
-In the project directory, you can run:
+### Creation process  🔧
 
-### `npm start`
+first started with a low-quality prototyping created in figma
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/50644185/122811186-c6ab3080-d295-11eb-8945-22831fef0284.png)
+![image](https://user-images.githubusercontent.com/50644185/122811213-cd39a800-d295-11eb-9503-cea61b1859bc.png)
+![image](https://user-images.githubusercontent.com/50644185/122811259-dc205a80-d295-11eb-91c9-54797d39a0fa.png)
+![image](https://user-images.githubusercontent.com/50644185/122811288-e7738600-d295-11eb-9939-e98fe29b1753.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+once you have the concept you work on a high quality prototype and then evaluate its usability
 
-### `npm test`
+![Frame 80](https://user-images.githubusercontent.com/50644185/122811486-2a355e00-d296-11eb-90bb-3ccc09d23d3f.png)
+![image](https://user-images.githubusercontent.com/50644185/122811743-784a6180-d296-11eb-942e-16f246c68946.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+We perform a usability approach with potential customers and make some respective improvements to have the next final result.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/50644185/122811842-944e0300-d296-11eb-8d38-e0bbf60ce94b.png)
+![image](https://user-images.githubusercontent.com/50644185/122812076-d8d99e80-d296-11eb-8ad4-41d680bba42c.png)
+![image](https://user-images.githubusercontent.com/50644185/122812116-e42cca00-d296-11eb-9067-48d0f55bc3be.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## additional information  🤓
 
-### `npm run eject`
+the project is hosted through heroku
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+https://comida-rapida.herokuapp.com/
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built by 🛠️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Gustavo Saavedra
+* Juan Camilo Arboleda Garcia 
+* Daniel Cano
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Important information 🎁
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* This project was carried out for the "Desarrollo de Experiencias multimedia para la web" subject of autónoma University of the West 📢 
+* * Thank you for the understanding and comments of the 🤓.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ with ❤️ 
